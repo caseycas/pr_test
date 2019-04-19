@@ -30,13 +30,13 @@ public class App {
 	private static CommandLine parseArgs(String[] args) {
 		Options mainOptions = new Options();
 		
-		Option inputDirArg = new Option("i", "training", true, "Directory path pointing to the input directory where the training code is stored.");
-		inputDirArg.setRequired(true);
-		mainOptions.addOption(inputDirArg);
+		//Option inputDirArg = new Option("i", "training", true, "Directory path pointing to the input directory where the training code is stored.");
+		//inputDirArg.setRequired(true);
+		//mainOptions.addOption(inputDirArg);
 		
-		Option outputDirArg = new Option("o", "Output", true, "Directory path pointing to the output directory (does not need to exist, files will be overwritten if already exists)");
-		outputDirArg.setRequired(true);
-		mainOptions.addOption(outputDirArg);
+		//Option outputDirArg = new Option("o", "Output", true, "Directory path pointing to the output directory (does not need to exist, files will be overwritten if already exists)");
+		//outputDirArg.setRequired(true);
+		//mainOptions.addOption(outputDirArg);
 		
 		
 		CommandLineParser parser = new DefaultParser();
@@ -67,15 +67,15 @@ public class App {
 		File inDir = new File(mainCmd.getOptionValue("i"));
 		File outDir = new File(mainCmd.getOptionValue("o"));
 		
-		if(!inDir.exists())
-		{
-			throw new IllegalArgumentException("Input directory must exist.");
-		}
+		//if(!inDir.exists())
+		//{
+		//	throw new IllegalArgumentException("Input directory must exist.");
+		//}
 		
-		if(!outDir.exists())
-		{
-			outDir.mkdirs();
-		}
+		//if(!outDir.exists())
+		//{
+		//	outDir.mkdirs();
+		//}
 		
 		LexerRunner runner = new LexerRunner(new JavaLexer(), false);
 		runner.setExtension("java");
